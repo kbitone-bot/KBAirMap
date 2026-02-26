@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">KBAirMap</string>
+    <string name="title_activity_main">KBAirMap</string>
+    <string name="package_name">com.kb.airmap</string>
+    <string name="custom_url_scheme">com.kb.airmap</string>
+</resources>
