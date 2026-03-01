@@ -1,3 +1,12 @@
+# 버전 0.9 화면예시
+<img width="1790" height="1013" alt="image" src="https://github.com/user-attachments/assets/f1abcd5b-629d-4d18-a0cd-02e1d40fb37b" />
+ - 완성도 80%
+ - 실제지도 탑재필요
+ - GPS 테스트 필요
+ - 부가 기능 및 UI 개선필요
+ - PDF 파일 업데이트 기능 개선필요
+
+
 # KB AirMap - 개발자 가이드
 
 > 항공로 지도 및 비행 계획 Android 애플리케이션
