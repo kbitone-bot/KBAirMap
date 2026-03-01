@@ -48,3 +48,37 @@ export interface Waypoint {
   description?: string;
   createdAt: number;
 }
+
+// 도착지점 (DEST)
+export interface Destination {
+  position: LatLng;
+  name: string;
+  setAt: number;
+}
+
+// 퀵 마커
+export interface QuickMarker {
+  id: string;
+  name: string;
+  position: LatLng;
+  memo?: string;
+  createdAt: number;
+}
+
+// 트랙 포인트
+export interface TrackPoint {
+  lat: number;
+  lng: number;
+  altitude: number | null;
+  speed: number | null;
+  heading: number | null;
+  timestamp: number;
+}
+
+// 트랙 로그 설정
+export interface TrackLogSettings {
+  enabled: boolean;
+  maxPoints: number; // 최대 저장 포인트 수
+  minDistance: number; // 최소 이동 거리 (m)
+  minTime: number; // 최소 시간 간격 (ms)
+}

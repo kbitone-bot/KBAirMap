@@ -82,6 +82,115 @@ html, body, #root {
 .tag.mock { background: rgba(245,158,11,0.15); color: var(--amber); border: 1px solid rgba(245,158,11,0.3); }
 .tag.real { background: rgba(16,185,129,0.15); color: var(--green); border: 1px solid rgba(16,185,129,0.3); }
 
+/* GPS Quality Badge */
+.gps-quality {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border: 1px solid;
+}
+
+/* DEST Panel */
+.dest-panel {
+  position: fixed;
+  top: 56px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(17, 24, 39, 0.95);
+  border: 1px solid var(--green);
+  border-radius: 8px;
+  padding: 10px 16px;
+  z-index: 40;
+  box-shadow: 0 4px 16px rgba(16, 185, 129, 0.2);
+  min-width: 280px;
+}
+
+.dest-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.dest-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.dest-value {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.dest-close {
+  width: 20px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  color: var(--text-2);
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.dest-close:hover { color: #ef4444; }
+
+.dest-stats {
+  display: flex;
+  justify-content: space-around;
+  gap: 16px;
+}
+
+.dest-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.stat-label {
+  font-size: 10px;
+  color: var(--text-2);
+  text-transform: uppercase;
+}
+
+.stat-value {
+  font-family: 'SF Mono', monospace;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.stat-value small {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--text-2);
+  margin-left: 2px;
+}
+
+.dest-summary {
+  padding: 8px 12px;
+  background: rgba(16, 185, 129, 0.1);
+  border-left: 2px solid var(--green);
+  margin: 0 12px 8px;
+}
+
+.dest-coords {
+  font-family: 'SF Mono', monospace;
+  font-size: 11px;
+  color: var(--green);
+}
+
 .coords {
   font-family: 'SF Mono', monospace;
   font-size: 12px;
@@ -239,6 +348,97 @@ html, body, #root {
   text-align: center;
   padding: 16px;
   font-style: italic;
+}
+
+/* Quick Marker Badge */
+.qm-badge {
+  background: #8b5cf6;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+/* Toggle Small */
+.toggle-small {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  font-size: 10px;
+  color: var(--text-2);
+}
+
+.toggle-small input {
+  accent-color: var(--cyan);
+}
+
+/* Track Info */
+.track-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  gap: 8px;
+}
+
+.track-count {
+  font-size: 11px;
+  color: var(--text-2);
+}
+
+.btn-export {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  background: var(--bg-3);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  color: var(--text-2);
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.btn-export:hover:not(:disabled) {
+  border-color: var(--cyan);
+  color: var(--cyan);
+}
+
+.btn-export:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Compact list */
+.waypoint-list.compact .waypoint-item {
+  padding: 6px 8px;
+}
+
+/* Toast */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--green);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  z-index: 300;
+  animation: fadeInOut 2s ease;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateX(-50%) translateY(10px); }
+  10% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  90% { opacity: 1; transform: translateX(-50%) translateY(0); }
+  100% { opacity: 0; transform: translateX(-50%) translateY(-10px); }
 }
 
 /* Map Area */

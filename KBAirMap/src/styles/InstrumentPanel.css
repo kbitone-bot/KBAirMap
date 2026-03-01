@@ -1,97 +1,201 @@
+/* Military EFB Style Instrument Panel */
 .inst-panel {
-  padding: 12px;
+  padding: 16px;
   display: flex;
   flex-direction: column;
+  gap: 16px;
+  background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+  min-height: 100%;
+}
+
+.panel-title {
+  font-size: 10px;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 2px;
+  text-align: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #334155;
+}
+
+/* Primary Flight Display Container */
+.pfd-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 12px;
 }
 
-.inst-box {
-  background: #1f2937;
-  border: 1px solid #374151;
+.instr-primary {
+  background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid #334155;
   border-radius: 8px;
   padding: 12px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
-.inst-title {
-  font-size: 11px;
-  color: #9ca3af;
-  margin-bottom: 8px;
-  text-transform: uppercase;
+.instr-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, currentColor, transparent);
+  opacity: 0.5;
 }
 
-.inst-svg {
-  width: 100%;
-  max-width: 120px;
-  height: auto;
-  margin: 0 auto;
-}
-
-.inst-value {
-  font-family: 'SF Mono', monospace;
-  font-size: 20px;
+.instr-label {
+  font-size: 9px;
   font-weight: 700;
-  color: #06b6d4;
-  margin-top: 8px;
-}
-
-.data-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 8px;
-}
-
-.data-item {
-  background: #1f2937;
-  border: 1px solid #374151;
-  border-radius: 6px;
-  padding: 10px;
-  text-align: center;
-}
-
-.data-label {
-  display: block;
-  font-size: 10px;
-  color: #6b7280;
+  color: #64748b;
+  letter-spacing: 1px;
   margin-bottom: 4px;
 }
 
-.data-value {
-  display: block;
+.instr-value {
   font-family: 'SF Mono', monospace;
-  font-size: 14px;
-  font-weight: 600;
-  color: #f9fafb;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1;
+  text-shadow: 0 0 10px currentColor;
 }
 
-.data-value small {
+.instr-value.hdg { color: #f59e0b; }
+.instr-value.spd { color: #10b981; }
+.instr-value.alt { color: #06b6d4; }
+.instr-value.vsi { color: #94a3b8; }
+.instr-value.vsi.up { color: #10b981; }
+.instr-value.vsi.down { color: #ef4444; }
+
+.instr-sub {
+  font-size: 10px;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+/* Heading Tape */
+.tape-section {
+  background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.tape-label {
   font-size: 9px;
-  color: #6b7280;
-  font-weight: 400;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  text-align: center;
 }
 
-.data-value.up { color: #10b981; }
-.data-value.down { color: #ef4444; }
-
-.gps-info {
-  background: #1f2937;
-  border: 1px solid #374151;
-  border-radius: 6px;
-  padding: 10px;
+.heading-tape {
+  height: 40px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
 }
 
-.gps-line {
+.tape-scale {
   display: flex;
-  justify-content: space-between;
-  font-size: 11px;
-  padding: 4px 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  transition: transform 0.3s ease;
 }
 
-.gps-line span:first-child {
-  color: #6b7280;
+.tape-mark {
+  width: 10px;
+  height: 8px;
+  border-left: 1px solid #475569;
+  position: relative;
+  flex-shrink: 0;
 }
 
-.gps-line span:last-child {
+.tape-mark.major {
+  height: 16px;
+  border-left: 2px solid #f59e0b;
+}
+
+.tape-mark.minor {
+  height: 12px;
+  border-left: 1px solid #64748b;
+}
+
+.tape-num {
+  position: absolute;
+  bottom: -2px;
+  left: -8px;
+  font-size: 9px;
+  color: #94a3b8;
   font-family: 'SF Mono', monospace;
-  color: #f9fafb;
+}
+
+.tape-pointer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #f59e0b;
+  font-size: 12px;
+  z-index: 10;
+}
+
+/* GPS Section */
+.gps-section {
+  background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.section-title {
+  font-size: 9px;
+  font-weight: 700;
+  color: #64748b;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #334155;
+}
+
+.gps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.gps-item {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.gps-label {
+  font-size: 8px;
+  color: #64748b;
+  letter-spacing: 0.5px;
+}
+
+.gps-value {
+  font-family: 'SF Mono', monospace;
+  font-size: 11px;
+  color: #e2e8f0;
+}
+
+.gps-value.good { color: #10b981; }
+.gps-value.fair { color: #f59e0b; }
+.gps-value.poor { color: #ef4444; }
+
+/* Responsive */
+@media (max-width: 320px) {
+  .instr-value {
+    font-size: 24px;
+  }
 }
