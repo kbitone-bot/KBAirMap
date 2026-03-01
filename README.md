@@ -1,3 +1,11 @@
+# 버전 0.91 화면예시
+<img width="1790" height="1008" alt="image" src="https://github.com/user-attachments/assets/d9c4af0b-383a-4085-b439-910f0c21a808" />
+ - 실제지도 탑재필요
+ - GPS 테스트 필요
+ - 부가 기능 및 UI 개선필요
+ - PDF 파일 업데이트 기능 개선필요
+ - 오류 개선필요
+
 # 버전 0.9 화면예시
 <img width="1790" height="1013" alt="image" src="https://github.com/user-attachments/assets/f1abcd5b-629d-4d18-a0cd-02e1d40fb37b" />
  - 완성도 80%
