@@ -1,0 +1,181 @@
+{
+  "type": "FeatureCollection",
+  "name": "Korea Airspaces",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "kadiz",
+        "name": "KADIZ",
+        "fullName": "Korea Air Defense Identification Zone",
+        "type": "adiz",
+        "category": "방공식별구역",
+        "upper": "UNLIMITED",
+        "lower": "GND",
+        "color": "#ef4444"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[124.0, 33.0], [126.0, 32.5], [129.5, 33.0], [132.0, 35.0], [132.0, 37.5], [130.0, 39.0], [127.5, 39.0], [124.0, 38.0], [124.0, 33.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "k-fir",
+        "name": "RKRR-INCHEON FIR",
+        "fullName": "Incheon Flight Information Region",
+        "type": "fir",
+        "category": "비행정보구역",
+        "upper": "UNLIMITED",
+        "lower": "GND",
+        "color": "#3b82f6"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[124.0, 33.0], [126.0, 32.5], [129.5, 33.0], [132.0, 35.0], [132.0, 37.5], [130.0, 39.0], [127.5, 39.0], [124.0, 38.0], [124.0, 33.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "p-73",
+        "name": "P-73",
+        "fullName": "Prohibited Area 73 - Seoul",
+        "type": "prohibited",
+        "category": "금지구역",
+        "upper": "FL250",
+        "lower": "GND",
+        "color": "#dc2626"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[126.9, 37.4], [127.0, 37.4], [127.0, 37.6], [126.9, 37.6], [126.9, 37.4]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "r-71",
+        "name": "R-71",
+        "fullName": "Restricted Area 71 - Osan",
+        "type": "restricted",
+        "category": "제한구역",
+        "upper": "FL500",
+        "lower": "GND",
+        "schedule": "BY NOTAM",
+        "color": "#f59e0b"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[127.0, 37.0], [127.1, 37.0], [127.1, 37.1], [127.0, 37.1], [127.0, 37.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "r-72",
+        "name": "R-72",
+        "fullName": "Restricted Area 72 - Suwon",
+        "type": "restricted",
+        "category": "제한구역",
+        "upper": "FL300",
+        "lower": "GND",
+        "schedule": "BY NOTAM",
+        "color": "#f59e0b"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[126.9, 37.2], [127.0, 37.2], [127.0, 37.3], [126.9, 37.3], [126.9, 37.2]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "r-76",
+        "name": "R-76",
+        "fullName": "Restricted Area 76 - Gangneung",
+        "type": "restricted",
+        "category": "제한구역",
+        "upper": "FL460",
+        "lower": "GND",
+        "schedule": "BY NOTAM",
+        "color": "#f59e0b"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[128.5, 37.6], [128.7, 37.6], [128.7, 37.8], [128.5, 37.8], [128.5, 37.6]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "r-77",
+        "name": "R-77",
+        "fullName": "Restricted Area 77 - Pohang",
+        "type": "restricted",
+        "category": "제한구역",
+        "upper": "FL460",
+        "lower": "GND",
+        "schedule": "BY NOTAM",
+        "color": "#f59e0b"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[129.2, 35.9], [129.4, 35.9], [129.4, 36.1], [129.2, 36.1], [129.2, 35.9]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "d-161",
+        "name": "D-161",
+        "fullName": "Danger Area 161 - Yellow Sea",
+        "type": "danger",
+        "category": "위험구역",
+        "upper": "FL200",
+        "lower": "GND",
+        "schedule": "INTERMITTENT",
+        "color": "#7c3aed"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[124.5, 36.0], [125.0, 36.0], [125.0, 36.5], [124.5, 36.5], [124.5, 36.0]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "tma-seoul",
+        "name": "SEOUL TMA",
+        "fullName": "Seoul Terminal Control Area",
+        "type": "tma",
+        "category": "터미널관제구역",
+        "upper": "FL190",
+        "lower": "GND",
+        "color": "#06b6d4"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[126.5, 36.8], [127.5, 36.8], [127.5, 37.5], [126.5, 37.5], [126.5, 36.8]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "cta-incheon",
+        "name": "INCHEON CTA",
+        "fullName": "Incheon Control Area",
+        "type": "cta",
+        "category": "관제구역",
+        "upper": "FL190",
+        "lower": "GND",
+        "color": "#10b981"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[126.0, 37.0], [127.0, 37.0], [127.0, 37.5], [126.0, 37.5], [126.0, 37.0]]]
+      }
+    }
+  ]
+}

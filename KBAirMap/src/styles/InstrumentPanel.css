@@ -1,0 +1,97 @@
+.inst-panel {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.inst-box {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+}
+
+.inst-title {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.inst-svg {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.inst-value {
+  font-family: 'SF Mono', monospace;
+  font-size: 20px;
+  font-weight: 700;
+  color: #06b6d4;
+  margin-top: 8px;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.data-item {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+}
+
+.data-label {
+  display: block;
+  font-size: 10px;
+  color: #6b7280;
+  margin-bottom: 4px;
+}
+
+.data-value {
+  display: block;
+  font-family: 'SF Mono', monospace;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f9fafb;
+}
+
+.data-value small {
+  font-size: 9px;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.data-value.up { color: #10b981; }
+.data-value.down { color: #ef4444; }
+
+.gps-info {
+  background: #1f2937;
+  border: 1px solid #374151;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.gps-line {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  padding: 4px 0;
+}
+
+.gps-line span:first-child {
+  color: #6b7280;
+}
+
+.gps-line span:last-child {
+  font-family: 'SF Mono', monospace;
+  color: #f9fafb;
+}

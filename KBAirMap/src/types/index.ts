@@ -3,22 +3,6 @@ export interface LatLng {
   lng: number;
 }
 
-export interface Waypoint {
-  id: string;
-  name: string;
-  coordinate: LatLng;
-  altitude?: number;
-  note?: string;
-}
-
-export interface FlightPlan {
-  id: string;
-  name: string;
-  waypoints: Waypoint[];
-  createdAt: string;
-  updatedAt: string;
-}
-
 export interface GpsData {
   latitude: number;
   longitude: number;
@@ -27,22 +11,6 @@ export interface GpsData {
   heading: number | null;
   speed: number | null;
   timestamp: number;
-}
-
-export interface MapState {
-  center: LatLng;
-  zoom: number;
-  bearing: number;
-  pitch: number;
-}
-
-export interface ReferencePoint {
-  id: string;
-  name: string;
-  coordinate: LatLng;
-  type: 'waypoint' | 'airport' | 'vor' | 'ndb' | 'user';
-  frequency?: string;
-  description?: string;
 }
 
 export interface AircraftState {
@@ -54,11 +22,29 @@ export interface AircraftState {
   timestamp: number;
 }
 
-export interface MapStyle {
-  version: number;
+export interface MBTileSource {
+  id: string;
   name: string;
-  sources: Record<string, any>;
-  layers: any[];
-  glyphs?: string;
-  sprite?: string;
+  description: string;
+  path: string;
+  bounds: [number, number, number, number];
+  minZoom: number;
+  maxZoom: number;
+  scale: MapScale;
+  size: number;
+  downloadedAt: string;
+  isActive: boolean;
+}
+
+export type MapScale = '1:50K' | '1:100K' | '1:250K' | '1:500K' | '1:1M';
+
+// 참조점 (Waypoint)
+export interface Waypoint {
+  id: string;
+  name: string;
+  position: LatLng;
+  altitude?: number;
+  type: 'user' | 'airport' | 'vor' | 'ndb' | 'fix';
+  description?: string;
+  createdAt: number;
 }

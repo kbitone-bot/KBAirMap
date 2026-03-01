@@ -1,0 +1,157 @@
+.airspace-filter {
+  background: rgba(17, 24, 39, 0.98);
+  border: 1px solid #374151;
+  border-radius: 8px;
+  padding: 12px;
+  min-width: 220px;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+}
+
+.airspace-filter.loading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #6b7280;
+  font-size: 12px;
+  padding: 16px;
+}
+
+.filter-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #374151;
+  margin-bottom: 10px;
+  color: #f9fafb;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.filter-header .count {
+  margin-left: auto;
+  color: #6b7280;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.filter-tree {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.filter-group {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.group-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 4px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.15s;
+  color: #9ca3af;
+}
+
+.group-header:hover {
+  background: rgba(55, 65, 81, 0.5);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+  accent-color: #06b6d4;
+}
+
+.group-name {
+  color: #e5e7eb;
+  font-weight: 500;
+}
+
+.group-count {
+  color: #6b7280;
+  font-size: 11px;
+  margin-left: auto;
+}
+
+.group-items {
+  padding-left: 28px;
+  padding-top: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.item-label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 11px;
+  transition: background 0.15s;
+}
+
+.item-label:hover {
+  background: rgba(55, 65, 81, 0.3);
+}
+
+.item-label input[type="checkbox"] {
+  width: 12px;
+  height: 12px;
+  cursor: pointer;
+  accent-color: #06b6d4;
+}
+
+.color-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.item-name {
+  color: #d1d5db;
+  font-family: 'SF Mono', monospace;
+}
+
+.item-alt {
+  color: #6b7280;
+  font-size: 10px;
+  margin-left: auto;
+}
+
+/* Scrollbar */
+.airspace-filter::-webkit-scrollbar {
+  width: 6px;
+}
+
+.airspace-filter::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.airspace-filter::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 3px;
+}
+
+.airspace-filter::-webkit-scrollbar-thumb:hover {
+  background: #4b5563;
+}

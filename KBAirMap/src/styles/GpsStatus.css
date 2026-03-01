@@ -1,0 +1,333 @@
+/**
+ * GPS Status Panel Styles
+ */
+
+.gps-panel {
+  background: linear-gradient(180deg, #1a2332 0%, #0f172a 100%);
+  border: 1px solid #334155;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid #334155;
+}
+
+.panel-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: #f1f5f9;
+  font-size: 14px;
+}
+
+.panel-title svg.pulsing {
+  color: #00ff88;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.gps-toggle {
+  padding: 8px 14px;
+  background: transparent;
+  border: 1px solid #475569;
+  border-radius: 6px;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.gps-toggle:hover {
+  border-color: #00d4ff;
+  color: #00d4ff;
+}
+
+.gps-toggle.active {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: #ff4444;
+  color: #ff4444;
+}
+
+/* Error Message */
+.gps-error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: rgba(239, 68, 68, 0.1);
+  border-left: 3px solid #ff4444;
+  color: #f87171;
+  font-size: 13px;
+}
+
+/* Content */
+.gps-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gps-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Coordinate Display */
+.coordinate-display {
+  font-family: 'SF Mono', monospace;
+  font-size: 14px;
+  color: #00d4ff;
+  padding: 12px 16px;
+  background: rgba(0, 212, 255, 0.05);
+  border: 1px solid rgba(0, 212, 255, 0.2);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Grid Layout */
+.gps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.gps-metric {
+  display: flex;
+  flex-direction: column;
+  padding: 14px;
+  background: rgba(30, 41, 59, 0.5);
+  border: 1px solid #334155;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+
+.gps-metric:hover {
+  border-color: #475569;
+  background: rgba(30, 41, 59, 0.7);
+}
+
+.metric-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.metric-value {
+  font-family: 'SF Mono', monospace;
+  font-size: 22px;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+.metric-value.altitude {
+  color: #00d4ff;
+}
+
+.metric-value.speed {
+  color: #00ff88;
+}
+
+.metric-value.heading {
+  color: #ffbf00;
+}
+
+.metric-unit {
+  font-size: 10px;
+  color: #475569;
+  margin-top: 4px;
+}
+
+/* VSI Section */
+.vsi-section {
+  padding: 14px;
+  background: rgba(30, 41, 59, 0.3);
+  border: 1px solid #334155;
+  border-radius: 10px;
+}
+
+.vsi-display {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.vsi-value {
+  font-family: 'SF Mono', monospace;
+  font-size: 24px;
+  font-weight: 700;
+  color: #94a3b8;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.vsi-value.climbing {
+  color: #00ff88;
+}
+
+.vsi-value.descending {
+  color: #ff4444;
+}
+
+.vsi-unit {
+  font-size: 12px;
+  font-weight: 400;
+  color: #64748b;
+}
+
+.vsi-bar {
+  flex: 1;
+  height: 40px;
+  background: #1e293b;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.vsi-bar::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #334155;
+}
+
+.vsi-bar-fill {
+  position: absolute;
+  bottom: 50%;
+  left: 0;
+  right: 0;
+  transition: all 0.3s;
+}
+
+.vsi-value.descending + .vsi-bar .vsi-bar-fill {
+  top: 50%;
+  bottom: auto;
+}
+
+/* Signal Section */
+.signal-section {
+  padding: 14px;
+  background: rgba(30, 41, 59, 0.3);
+  border: 1px solid #334155;
+  border-radius: 10px;
+}
+
+.signal-display {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.signal-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+}
+
+.signal-bar {
+  width: 6px;
+  background-color: #334155;
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.signal-bar:nth-child(1) { height: 8px; }
+.signal-bar:nth-child(2) { height: 14px; }
+.signal-bar:nth-child(3) { height: 20px; }
+.signal-bar:nth-child(4) { height: 26px; }
+.signal-bar:nth-child(5) { height: 32px; }
+
+.signal-bar.active {
+  box-shadow: 0 0 8px currentColor;
+}
+
+.signal-text {
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+/* Timestamp */
+.gps-timestamp {
+  font-size: 11px;
+  color: #475569;
+  text-align: center;
+  font-family: 'SF Mono', monospace;
+}
+
+/* Empty State */
+.gps-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 40px 24px;
+  color: #64748b;
+  text-align: center;
+}
+
+.gps-empty .empty-icon {
+  opacity: 0.3;
+  color: #94a3b8;
+}
+
+.gps-empty p {
+  font-size: 15px;
+  font-weight: 500;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.gps-empty span {
+  font-size: 13px;
+}
+
+.btn-start {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+  border: none;
+  border-radius: 8px;
+  color: #0f172a;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-top: 8px;
+}
+
+.btn-start:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 212, 255, 0.3);
+}
