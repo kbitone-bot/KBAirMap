@@ -1,4 +1,5 @@
 import { useState, useCallback, useEffect } from 'react';
+import { Capacitor } from '@capacitor/core';
 import { Menu, X, Target, Map, FileText, Radio, MapPin, Trash2, Layers, Navigation, Crosshair, Flag, Copy, Download } from 'lucide-react';
 import MapView from './components/MapView';
 import InstrumentPanel from './components/InstrumentPanel';
@@ -23,7 +24,7 @@ function App() {
   const [rightPanelOpen, setRightPanelOpen] = useState(true);
   const [showPDF, setShowPDF] = useState(false);
   const [mapScale, setMapScale] = useState<MapScale>('1:250K');
-  const [isMockMode, setIsMockMode] = useState(true);
+  const [isMockMode, setIsMockMode] = useState(!Capacitor.isNativePlatform());
   const [followAircraft, setFollowAircraft] = useState(true);
   
   // 참조점 & 퀵마커
